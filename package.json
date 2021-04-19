@@ -32,7 +32,7 @@
     "format:lint": "npm run format && npm run lint",
     "clear": "rimraf build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
