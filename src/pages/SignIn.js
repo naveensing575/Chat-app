@@ -21,6 +21,10 @@ const SignIn = () => {
     }
   };
 
+  const onGithubSignIn = () => {
+    signInWithProvider(new firebase.auth.GithubAuthProvider());
+  };
+
   const onGoogleSignIn = () => {
     signInWithProvider(new firebase.auth.GoogleAuthProvider());
   };
@@ -32,12 +36,16 @@ const SignIn = () => {
           <Col xs={24} md={12} mdOffset={6}>
             <Panel>
               <div className="text-center">
-                <h2>Welcome to Chat</h2><br />
+                <h2>Welcome to Chat</h2><br/>
                 <p>Progressive chat platform by @Naveen</p><br/>
               </div>
-              <div>
+              <div className="mt-3">
                 <Button block color="green" onClick={onGoogleSignIn}>
                   <Icon icon="google" /> Continue with Google
+                </Button>
+                <br/>
+                <Button block color="blue" onClick={onGithubSignIn}>
+                  <Icon icon="github" /> Continue with Github
                 </Button>
               </div>
             </Panel>
