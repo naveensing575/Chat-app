@@ -17,11 +17,6 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "off",
-    "arrow-body-style": [0],
-    "import/resolver": {
-      "node": {
-        "paths": ["rsuite/dist/styles/rsuite-default.css"]
-      }
+    "arrow-body-style": [0]
   }
-}
 }
