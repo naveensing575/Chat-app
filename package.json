@@ -1,5 +1,6 @@
 {
   "name": "chat-app",
+  "homepage": "https://naveensing575.github.io/Chat-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
