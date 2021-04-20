@@ -8,8 +8,8 @@ const ProviderBlock = () => {
     'google.com': auth.currentUser.providerData.some(
       data => data.providerId === 'google.com'
     ),
-    'facebook.com': auth.currentUser.providerData.some(
-      data => data.providerId === 'facebook.com'
+    'github.com': auth.currentUser.providerData.some(
+      data => data.providerId === 'github.com'
     ),
   });
 
@@ -36,8 +36,8 @@ const ProviderBlock = () => {
     }
   };
 
-  const unlinkFacebook = () => {
-    unlink('facebook.com');
+  const unlinkGithub = () => {
+    unlink('github.com');
   };
   const unlinkGoogle = () => {
     unlink('google.com');
@@ -53,8 +53,8 @@ const ProviderBlock = () => {
     }
   };
 
-  const linkFacebook = () => {
-    link(new firebase.auth.FacebookAuthProvider());
+  const linkGithub = () => {
+    link(new firebase.auth.GithubAuthProvider());
   };
   const linkGoogle = () => {
     link(new firebase.auth.GoogleAuthProvider());
@@ -67,9 +67,9 @@ const ProviderBlock = () => {
           <Icon icon="google" /> Connected
         </Tag>
       )}
-      {isConnected['facebook.com'] && (
-        <Tag color="blue" closable onClose={unlinkFacebook}>
-          <Icon icon="facebook" /> Connected
+      {isConnected['github.com'] && (
+        <Tag color="blue" closable onClose={unlinkGithub}>
+          <Icon icon="github" /> Connected
         </Tag>
       )}
 
@@ -80,9 +80,9 @@ const ProviderBlock = () => {
           </Button>
         )}
 
-        {!isConnected['facebook.com'] && (
-          <Button block color="blue" onClick={linkFacebook}>
-            <Icon icon="facebook" /> Link to Facebook
+        {!isConnected['github.com'] && (
+          <Button block color="blue" onClick={linkGithub}>
+            <Icon icon="github" /> Link to Github
           </Button>
         )}
       </div>
